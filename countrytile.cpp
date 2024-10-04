@@ -1,8 +1,7 @@
 #include "countrytile.h"
 
-CountryTile::CountryTile(QObject *parent, QString title, Player *owner, quint32 price, QMap<quint32, quint32> rentMap, quint32 buildingLevel)
+CountryTile::CountryTile(QObject *parent, QString title, quint32 price, QMap<quint32, quint32> rentMap, quint32 buildingLevel)
     :Tile(parent,title)
-    ,owner(owner)
     ,price(price)
     ,rentMap(rentMap)
     ,buildingLevel(buildingLevel)
@@ -18,16 +17,6 @@ void CountryTile::onPlayerEnter(Player &owner, Player &player)
 void CountryTile::onPlayerPassby(Player &owner, Player &player)
 {
 
-}
-
-void CountryTile::setOwner(Player *owner)
-{
-    this->owner = owner;
-}
-
-Player *CountryTile::getOwner()
-{
-    return owner;
 }
 
 void CountryTile::setPrice(const quint32 price)

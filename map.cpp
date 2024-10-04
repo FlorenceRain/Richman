@@ -19,8 +19,8 @@ Map::Map(QObject *parent)
     QMap<quint32, quint32> rentMap3 = {{1, 200}, {2, 300}, {3, 400}};
     QMap<quint32, quint32> rentMap4 = {{1, 250}, {2, 350}, {3, 450}};
 
-    tiles.append(new CountryTile(this, "国家A", nullptr, 500, rentMap1, 1));
-    tiles.append(new CountryTile(this, "国家B", nullptr, 600, rentMap2, 1));
-    tiles.append(new CountryTile(this, "国家C", nullptr, 700, rentMap3, 1));
-    tiles.append(new CountryTile(this, "国家D", nullptr, 800, rentMap4, 1));
+    tiles.append(new CountryTile(this, "国家A", 500, rentMap1, 1));
+    tiles.append(new CountryTile(this, "国家B", 600, rentMap2, 1));
+    tiles.append(new CountryTile(this, "国家C", 700, rentMap3, 1));
+    tiles.append(new CountryTile(this, "国家D", 800, rentMap4, 1));
 }

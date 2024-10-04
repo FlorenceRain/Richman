@@ -1,9 +1,16 @@
 #include "player.h"
 #include "tile.h"
 
-Player::Player(QObject *parent, QString name)
+Player::Player(QObject *parent, QString name, quint32 cash, Tile *currentTile)
     : QObject{parent}
-    ,name(name)
+    , name(name)
+    , cash(cash)
+    , currentTile(currentTile)
+    , turnCount(0)
+    , status(Normal)
+    , statusDuration(0)
+    , assets{}
+
 {
 
 }
@@ -48,15 +55,17 @@ quint32 Player::getTurnCount() const
 
 }
 
-void Player::setStatus(QString status)
+void Player::setStatus(State status)
 {
 
 }
 
-QString Player::getStatus() const
+Player::State Player::getStatus() const
 {
 
 }
+
+
 
 void Player::setStatusDuration(quint32 duration)
 {
@@ -84,6 +93,11 @@ void Player::removeAsset(Tile *asset)
 }
 
 QVector<Tile *> Player::getAssets() const
+{
+
+}
+
+void Player::takeTurn()
 {
 
 }

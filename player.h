@@ -10,7 +10,13 @@ class Player : public QObject
 {
     Q_OBJECT
 public:
-    explicit Player(QObject *parent = nullptr, QString name = "Player");
+    explicit Player(QObject *parent = nullptr, QString name = "Player",quint32 cash = 0, Tile* currentTile = nullptr);
+
+    enum State {
+        Normal,   // 正常状态
+        Pause,   // 暂停
+        Bankrupt  // 破产
+    };
 
     // 现金相关
     void setCash(quint32 cash);
@@ -28,8 +34,8 @@ public:
     quint32 getTurnCount() const;
 
     // 玩家状态
-    void setStatus(QString status);
-    QString getStatus() const;
+    void setStatus(Player::State status);
+    Player::State getStatus() const;
 
     void setStatusDuration(quint32 duration);  // 设置状态持续的回合数
     quint32 getStatusDuration() const;
@@ -40,16 +46,18 @@ public:
     void removeAsset(Tile* asset);
     QVector<Tile*> getAssets() const;
 
+    void takeTurn();  // 玩家进行一个回合
+
 signals:
+    void playerMoved(Tile* startTile, Tile* endTile);  // 当玩家移动时发出信号
 
 private:
     QString name;           // 玩家名字
     quint32 cash;           // 现金
     Tile* currentTile;      // 玩家当前所在格
     quint32 turnCount;      // 当前回合数
-    QString status;         // 玩家状态（例如：监禁、普通、暂停行动等）
+    Player::State status;   // 玩家状态（例如：监禁、普通、暂停行动等）
     quint32 statusDuration; // 状态剩余回合数
-
     QVector<Tile*> assets;  // 玩家拥有的资产
 };
 

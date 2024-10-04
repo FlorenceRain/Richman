@@ -9,16 +9,12 @@ class CountryTile : public Tile
 public:
     explicit CountryTile(QObject *parent = nullptr,
                          QString title = "default tile title",
-                         Player* owner = nullptr,
                          quint32 price = 0,
                          QMap<quint32, quint32> rentMap = {},
                          quint32 buildingLevel = 0);
 
     void onPlayerEnter(Player& owner, Player& player)override;//玩家进入后的操作
     void onPlayerPassby(Player& owner, Player& player)override;//玩家路过后的操作
-
-    void setOwner(Player* owner);
-    Player* getOwner();
 
     void setPrice(const quint32 price);
     quint32 getPrice();
@@ -35,7 +31,6 @@ public:
 signals:
 
 private:
-    Player* owner;//所有者
     quint32 price;//购买价格
     QMap<quint32, quint32> rentMap;  // 存储不同等级的租金
     quint32 buildingLevel;//等级
