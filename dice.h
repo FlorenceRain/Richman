@@ -1,0 +1,15 @@
+#ifndef DICE_H
+#define DICE_H
+
+#include <QObject>
+
+class Dice : public QObject
+{
+    Q_OBJECT
+public:
+    explicit Dice(QObject *parent = nullptr);
+
+signals:
+};
+
+#endif // DICE_H

@@ -1,0 +1,397 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: F:/Qt/Tools/mingw1120_64/bin/g++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.6.0-preview-23122-03+f93b24b5a for .NET Framework
+      生成启动时间为 2024/10/4 13:03:51。
+      Included response file: F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+      
+      节点 1 上的项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\3.29.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)。
+      PrepareForBuild:
+        正在创建目录“Debug\\”。
+        正在创建目录“Debug\\CompilerIdCXX.tlog\\”。
+      InitializeBuildStatus:
+        正在创建“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+      ClCompile:
+        F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\3.29.3\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在删除文件“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”。
+        正在对“Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate”执行 Touch 任务。
+      已完成生成项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\3.29.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)的操作。
+      
+      已成功生成。
+          0 个警告
+          0 个错误
+      
+      已用时间 00:00:01.21
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/3.29.3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-paw5sa"
+      binary: "F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-paw5sa"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-paw5sa'
+        
+        Run Build Command(s): "F:/Program Files/Microsoft Visual Studio/2022/Preview/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_68987.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.0-preview-23122-03+f93b24b5a for .NET Framework
+        生成启动时间为 2024/10/4 13:03:53。
+        Included response file: F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-paw5sa\\cmTC_68987.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_68987.dir\\Debug\\”。
+          正在创建目录“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-paw5sa\\Debug\\”。
+          正在创建目录“cmTC_68987.dir\\Debug\\cmTC_68987.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_68987.dir\\Debug\\cmTC_68987.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        ClCompile:
+          F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_68987.dir\\Debug\\\\" /Fd"cmTC_68987.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "F:\\Qt\\Tools\\CMake_64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.36.32502 版
+          CMakeCXXCompilerABI.cpp
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_68987.dir\\Debug\\\\" /Fd"cmTC_68987.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "F:\\Qt\\Tools\\CMake_64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-paw5sa\\Debug\\cmTC_68987.exe" /INCREMENTAL /ILK:"cmTC_68987.dir\\Debug\\cmTC_68987.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-paw5sa/Debug/cmTC_68987.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-paw5sa/Debug/cmTC_68987.lib" /MACHINE:X64  /machine:x64 cmTC_68987.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_68987.vcxproj -> F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-paw5sa\\Debug\\cmTC_68987.exe
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_68987.dir\\Debug\\cmTC_68987.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_68987.dir\\Debug\\cmTC_68987.tlog\\cmTC_68987.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-paw5sa\\cmTC_68987.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.78
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': F:/Program Files/Microsoft Visual Studio/2022/Preview/VC/Tools/MSVC/14.36.32502/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Running the CXX compiler's linker: "F:/Program Files/Microsoft Visual Studio/2022/Preview/VC/Tools/MSVC/14.36.32502/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.36.32502.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake:27 (_qt_internal_find_third_party_dependencies)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:124 (include)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-517aw5"
+      binary: "F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-517aw5"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-517aw5'
+        
+        Run Build Command(s): "F:/Program Files/Microsoft Visual Studio/2022/Preview/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f545d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.0-preview-23122-03+f93b24b5a for .NET Framework
+        生成启动时间为 2024/10/4 13:03:54。
+        Included response file: F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-517aw5\\cmTC_f545d.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_f545d.dir\\Debug\\”。
+          正在创建目录“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-517aw5\\Debug\\”。
+          正在创建目录“cmTC_f545d.dir\\Debug\\cmTC_f545d.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_f545d.dir\\Debug\\cmTC_f545d.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        ClCompile:
+          F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_f545d.dir\\Debug\\\\" /Fd"cmTC_f545d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-517aw5\\src.cxx"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.36.32502 版
+          src.cxx
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_f545d.dir\\Debug\\\\" /Fd"cmTC_f545d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-517aw5\\src.cxx"
+        F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-517aw5\\src.cxx(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-517aw5\\cmTC_f545d.vcxproj]
+        已完成生成项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-517aw5\\cmTC_f545d.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-517aw5\\cmTC_f545d.vcxproj”(默认目标) (1) ->
+        (ClCompile 目标) -> 
+          F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-517aw5\\src.cxx(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-517aw5\\cmTC_f545d.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.35
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake:27 (_qt_internal_find_third_party_dependencies)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:124 (include)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-6rbbbf"
+      binary: "F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-6rbbbf"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-6rbbbf'
+        
+        Run Build Command(s): "F:/Program Files/Microsoft Visual Studio/2022/Preview/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3bacc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.0-preview-23122-03+f93b24b5a for .NET Framework
+        生成启动时间为 2024/10/4 13:03:54。
+        Included response file: F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-6rbbbf\\cmTC_3bacc.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_3bacc.dir\\Debug\\”。
+          正在创建目录“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-6rbbbf\\Debug\\”。
+          正在创建目录“cmTC_3bacc.dir\\Debug\\cmTC_3bacc.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_3bacc.dir\\Debug\\cmTC_3bacc.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        ClCompile:
+          F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_3bacc.dir\\Debug\\\\" /Fd"cmTC_3bacc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-6rbbbf\\CheckFunctionExists.cxx"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.36.32502 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          CheckFunctionExists.cxx
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_3bacc.dir\\Debug\\\\" /Fd"cmTC_3bacc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-6rbbbf\\CheckFunctionExists.cxx"
+        Link:
+          F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-6rbbbf\\Debug\\cmTC_3bacc.exe" /INCREMENTAL /ILK:"cmTC_3bacc.dir\\Debug\\cmTC_3bacc.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-6rbbbf/Debug/cmTC_3bacc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-6rbbbf/Debug/cmTC_3bacc.lib" /MACHINE:X64  /machine:x64 cmTC_3bacc.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-6rbbbf\\cmTC_3bacc.vcxproj]
+        已完成生成项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-6rbbbf\\cmTC_3bacc.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-6rbbbf\\cmTC_3bacc.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-6rbbbf\\cmTC_3bacc.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.45
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake:27 (_qt_internal_find_third_party_dependencies)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:124 (include)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-jshc1t"
+      binary: "F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-jshc1t"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-jshc1t'
+        
+        Run Build Command(s): "F:/Program Files/Microsoft Visual Studio/2022/Preview/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9423e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.0-preview-23122-03+f93b24b5a for .NET Framework
+        生成启动时间为 2024/10/4 13:03:55。
+        Included response file: F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-jshc1t\\cmTC_9423e.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_9423e.dir\\Debug\\”。
+          正在创建目录“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-jshc1t\\Debug\\”。
+          正在创建目录“cmTC_9423e.dir\\Debug\\cmTC_9423e.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_9423e.dir\\Debug\\cmTC_9423e.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        ClCompile:
+          F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_9423e.dir\\Debug\\\\" /Fd"cmTC_9423e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-jshc1t\\CheckFunctionExists.cxx"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.36.32502 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          CheckFunctionExists.cxx
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_9423e.dir\\Debug\\\\" /Fd"cmTC_9423e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-jshc1t\\CheckFunctionExists.cxx"
+        Link:
+          F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-jshc1t\\Debug\\cmTC_9423e.exe" /INCREMENTAL /ILK:"cmTC_9423e.dir\\Debug\\cmTC_9423e.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-jshc1t/Debug/cmTC_9423e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-jshc1t/Debug/cmTC_9423e.lib" /MACHINE:X64  /machine:x64 cmTC_9423e.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-jshc1t\\cmTC_9423e.vcxproj]
+        已完成生成项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-jshc1t\\cmTC_9423e.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-jshc1t\\cmTC_9423e.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-jshc1t\\cmTC_9423e.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.45
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:33 (_qt_internal_find_third_party_dependencies)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "F:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:42 (_qt_internal_find_qt_dependencies)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:169 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-9pdufa"
+      binary: "F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-9pdufa"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-9pdufa'
+        
+        Run Build Command(s): "F:/Program Files/Microsoft Visual Studio/2022/Preview/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_75a1e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.0-preview-23122-03+f93b24b5a for .NET Framework
+        生成启动时间为 2024/10/4 13:03:55。
+        Included response file: F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-9pdufa\\cmTC_75a1e.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_75a1e.dir\\Debug\\”。
+          正在创建目录“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-9pdufa\\Debug\\”。
+          正在创建目录“cmTC_75a1e.dir\\Debug\\cmTC_75a1e.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_75a1e.dir\\Debug\\cmTC_75a1e.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        ClCompile:
+          F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_75a1e.dir\\Debug\\\\" /Fd"cmTC_75a1e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-9pdufa\\src.cxx"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.36.32502 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          src.cxx
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_75a1e.dir\\Debug\\\\" /Fd"cmTC_75a1e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-9pdufa\\src.cxx"
+        Link:
+          F:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.36.32502\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-9pdufa\\Debug\\cmTC_75a1e.exe" /INCREMENTAL /ILK:"cmTC_75a1e.dir\\Debug\\cmTC_75a1e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-9pdufa/Debug/cmTC_75a1e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/Qt/Project/Richman/build/Desktop_Qt_6_7_3_MinGW_64_bit-Release/CMakeFiles/CMakeScratch/TryCompile-9pdufa/Debug/cmTC_75a1e.lib" /MACHINE:X64  /machine:x64 cmTC_75a1e.dir\\Debug\\src.obj
+          cmTC_75a1e.vcxproj -> F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-9pdufa\\Debug\\cmTC_75a1e.exe
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_75a1e.dir\\Debug\\cmTC_75a1e.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_75a1e.dir\\Debug\\cmTC_75a1e.tlog\\cmTC_75a1e.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“F:\\Qt\\Project\\Richman\\build\\Desktop_Qt_6_7_3_MinGW_64_bit-Release\\CMakeFiles\\CMakeScratch\\TryCompile-9pdufa\\cmTC_75a1e.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.67
+        
+      exitCode: 0
