@@ -1,5 +1,5 @@
 #include "tile.h"
-
+#include "player.h"
 
 Tile::Tile(QObject *parent, QString title)
     :QObject(parent)

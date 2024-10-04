@@ -12,7 +12,7 @@ Map::Map(QObject *parent)
 {
     tiles.clear();
 
-    tiles.append(new StartTile());
+    tiles.append(new StartTile(this, "起始位置"));
     // 添加4个不同的国家
     QMap<quint32, quint32> rentMap1 = {{1, 100}, {2, 200}, {3, 300}};
     QMap<quint32, quint32> rentMap2 = {{1, 150}, {2, 250}, {3, 350}};

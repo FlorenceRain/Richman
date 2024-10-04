@@ -5,7 +5,7 @@
 #include <QGraphicsRectItem>
 #include <QMap>
 
-#include "player.h"
+class Player;
 
 class Tile : public QObject
 {
