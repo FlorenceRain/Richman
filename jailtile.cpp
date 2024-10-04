@@ -1,8 +1,10 @@
 #include "jailtile.h"
 
-JailTile::JailTile(QObject *parent)
-    : Tile{parent}
-{}
+JailTile::JailTile(QObject *parent, QString title)
+    :Tile(parent, title)
+{
+
+}
 
 void JailTile::onPlayerEnter(Player &owner, Player &player)
 {
@@ -10,11 +12,6 @@ void JailTile::onPlayerEnter(Player &owner, Player &player)
 }
 
 void JailTile::onPlayerPassby(Player &owner, Player &player)
-{
-
-}
-
-bool JailTile::isLevelMax()
 {
 
 }
