@@ -9,6 +9,8 @@ class Dice : public QObject
 public:
     explicit Dice(QObject *parent = nullptr);
 
+    quint16 threw();
+
 signals:
 };
 

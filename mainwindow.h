@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include "gameview.h"
+#include "gamemanager.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -19,5 +20,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    GameView* gameView;
+    GameManager* gamemanager;
 };
 #endif // MAINWINDOW_H

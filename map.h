@@ -10,8 +10,9 @@ class Map : public QObject
     Q_OBJECT
 public:
     explicit Map(QObject *parent = nullptr);
+    int getTileIndex(Tile* tile) const;
 
-    Tile* gettiles(const QString& title);
+
 signals:
 
 private:

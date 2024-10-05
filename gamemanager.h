@@ -15,10 +15,13 @@ class GameManager : public QObject
 public:
     explicit GameManager(QObject *parent = nullptr);
 
+    void initializeGame();//初始化游戏后台
+
     void addPlayer(const Player& player);//添加玩家
     void clearPlayer();//清除玩家
 
     void start();//开始游戏
+    void endTurn();
     void pause();//暂停
     void doContinue();//继续
     void end();//结束游戏

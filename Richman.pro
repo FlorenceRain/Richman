@@ -17,6 +17,7 @@ SOURCES += \
     countrytile.cpp \
     dice.cpp \
     gamemanager.cpp \
+    gameview.cpp \
     jailtile.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     countrytile.h \
     dice.h \
     gamemanager.h \
+    gameview.h \
     jailtile.h \
     mainwindow.h \
     map.h \

@@ -42,7 +42,7 @@ void Player::moveTo(Tile *newTile)
 
 Tile *Player::getCurrentTile() const
 {
-
+    return currentTile;
 }
 
 void Player::incrementTurn()

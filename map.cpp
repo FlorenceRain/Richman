@@ -24,3 +24,8 @@ Map::Map(QObject *parent)
     tiles.append(new CountryTile(this, "国家C", 700, rentMap3, 1));
     tiles.append(new CountryTile(this, "国家D", 800, rentMap4, 1));
 }
+
+int Map::getTileIndex(Tile *tile) const
+{
+    return tiles.indexOf(tile);
+}
