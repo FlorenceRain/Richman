@@ -10,11 +10,6 @@ GameManager::GameManager(QObject *parent)
 
 }
 
-void GameManager::initializeGame()
-{
-
-}
-
 void GameManager::addPlayer(const Player &player)
 {
 

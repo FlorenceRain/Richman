@@ -9,6 +9,7 @@
 
 Map::Map(QObject *parent)
     : QObject{parent}
+    , tiles{}
 {
     tiles.clear();
 

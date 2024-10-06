@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 
 #include <QGraphicsRectItem>
+#include <QPushButton>
+#include <QFile>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -11,10 +14,22 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // 加载 QSS 文件
+    QFile file(":/qss/resource/qss/style.qss");  // 确保 qss 文件路径正确
+    if (file.open(QFile::ReadOnly))
+    {
+        QString styleSheet = QString::fromUtf8(file.readAll());
+        qDebug() << styleSheet;
+        qApp->setStyleSheet(styleSheet); // 为整个应用程序设置样式表
+        file.close();
+    }
+    else
+    {
+        qDebug() << "qss file open failed！";
+    }
 
-    // 初始化界面和游戏状态
-    gameView->initializeScene();
-    gamemanager->initializeGame();
+
+    setCentralWidget(gameView);
 }
 
 MainWindow::~MainWindow()

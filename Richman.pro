@@ -12,10 +12,12 @@ SOURCES += \
     bank.cpp \
     card.cpp \
     chancetile.cpp \
+    characterselectionwidget.cpp \
     communitychesttile.cpp \
     companytile.cpp \
     countrytile.cpp \
     dice.cpp \
+    gameboardwidget.cpp \
     gamemanager.cpp \
     gameview.cpp \
     jailtile.cpp \
@@ -23,6 +25,7 @@ SOURCES += \
     mainwindow.cpp \
     map.cpp \
     player.cpp \
+    startmenuwidget.cpp \
     starttile.cpp \
     tile.cpp \
     transportstationtile.cpp
@@ -31,24 +34,35 @@ HEADERS += \
     bank.h \
     card.h \
     chancetile.h \
+    characterselectionwidget.h \
     communitychesttile.h \
     companytile.h \
     countrytile.h \
     dice.h \
+    gameboardwidget.h \
     gamemanager.h \
     gameview.h \
     jailtile.h \
     mainwindow.h \
     map.h \
     player.h \
+    startmenuwidget.h \
     starttile.h \
     tile.h \
     transportstationtile.h
 
 FORMS += \
-    mainwindow.ui
+    characterselectionwidget.ui \
+    gameboardwidget.ui \
+    mainwindow.ui \
+    startmenuwidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES +=
+
+RESOURCES += \
+    resource.qrc

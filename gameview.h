@@ -1,28 +1,32 @@
 #ifndef GAMEVIEW_H
 #define GAMEVIEW_H
 
-#include <QGraphicsView>
 #include <QObject>
+#include <QStackedWidget>
 
 class Player;
 class Tile;
+class StartMenuWidget;
+class CharacterSelectionWidget;
+class GameBoardWidget;
 
-class GameView : public QGraphicsView
+
+class GameView : public QWidget
 {
     Q_OBJECT
 public:
-    explicit GameView(QWidget *parent = nullptr);
+    explicit GameView(QWidget  *parent = nullptr);
 
-    // 初始化场景和地图
-    void initializeScene();
-
-public slots:
-
+signals:
+    void onStartButtonClicked();
 
 private:
-    QGraphicsScene* scene;
-    QVector<QGraphicsRectItem*> tiles; // 存储格子的图形元素
-    QMap<Player*, QGraphicsPixmapItem*> playerIcons; // 玩家图标
+
+    QStackedWidget* stackedWidget; // 用于切换不同界面的堆叠窗口
+    StartMenuWidget* startMenuWidget;       // 开始菜单
+    CharacterSelectionWidget* characterSelectionWidget; // 选人界面
+    GameBoardWidget* gameBoardWidget;       // 游戏界面
+
 };
 
 #endif // GAMEVIEW_H

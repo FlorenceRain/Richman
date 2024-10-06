@@ -15,8 +15,6 @@ class GameManager : public QObject
 public:
     explicit GameManager(QObject *parent = nullptr);
 
-    void initializeGame();//初始化游戏后台
-
     void addPlayer(const Player& player);//添加玩家
     void clearPlayer();//清除玩家
 
@@ -34,6 +32,7 @@ private:
     Bank*   bank; //银行对象
     Map*    map;   //地图对象
     Dice*   dice; //色子对象
+    quint32 countRound;//回合计数
 };
 
 #endif // GAMEMANAGER_H

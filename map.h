@@ -16,7 +16,7 @@ public:
 signals:
 
 private:
-    QVector<Tile*> tiles = {};//格子对象容器
+    QVector<Tile*> tiles;//格子对象容器
 };
 
 #endif // MAP_H
