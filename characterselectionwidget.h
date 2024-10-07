@@ -17,6 +17,7 @@ public:
 
 signals:
     void startGame();
+    void backup();
 
 private:
     Ui::CharacterSelectionWidget *ui;

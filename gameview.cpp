@@ -21,7 +21,6 @@ GameView::GameView(QWidget  *parent)
 
     // 设置初始界面为开始菜单
     stackedWidget->setCurrentWidget(startMenuWidget);
-    startMenuWidget->show();
 
     // 布局设置
     QVBoxLayout* layout = new QVBoxLayout(this);
@@ -33,6 +32,13 @@ GameView::GameView(QWidget  *parent)
         // 设置初始界面为选人界面
         stackedWidget->setCurrentWidget(characterSelectionWidget);
     });
+
+    connect(characterSelectionWidget,&CharacterSelectionWidget::backup,this,[this](){
+
+        // 设置初始界面为开始菜单
+        stackedWidget->setCurrentWidget(startMenuWidget);
+    });
+
     connect(characterSelectionWidget, &CharacterSelectionWidget::startGame, this, &GameView::onStartButtonClicked);
 }
 

@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     if (file.open(QFile::ReadOnly))
     {
         QString styleSheet = QString::fromUtf8(file.readAll());
-        qDebug() << styleSheet;
+        // qDebug() << styleSheet;
         qApp->setStyleSheet(styleSheet); // 为整个应用程序设置样式表
         file.close();
     }
