@@ -4,37 +4,66 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QPushButton>
+#include <QLineEdit>
 
 CharacterSelectionWidget::CharacterSelectionWidget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::CharacterSelectionWidget)
+    ,playerAvatarSelectionDialog(new PlayerAvatarSelectionDialog(this))
 {
     ui->setupUi(this);
-    QVBoxLayout* layout = new QVBoxLayout(this);
-    QGridLayout* gridLayout = new QGridLayout();
 
-    // 头像选择
+    QVBoxLayout* mainLayout = new QVBoxLayout(this);   // 主布局
+    QHBoxLayout* avatarLayout = new QHBoxLayout();     // 头像和输入框布局
+
+    // 设置主布局和头像布局居中对齐
+    mainLayout->setAlignment(Qt::AlignCenter);
+    avatarLayout->setAlignment(Qt::AlignCenter);
+
+    // 头像选择和输入框
     for (int i = 0; i < 4; ++i) {
-        QLabel* avatarLabel = new QLabel("玩家 " + QString::number(i + 1), this);
-        QPushButton* avatarButton = new QPushButton(QString("选择玩家%1").arg(i+1), this);
-        avatarButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        QVBoxLayout* playerLayout = new QVBoxLayout();  // 每个玩家的布局
 
-        // 这里可以添加头像选择的逻辑
-        gridLayout->addWidget(avatarLabel, i, 0);
-        gridLayout->addWidget(avatarButton, i, 1);
+        // 头像按钮
+        QPushButton* avatarButton = new QPushButton("?", this);
+        avatarButton->setFixedSize(200, 200);  // 固定头像大小为400x400
+        avatarButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);  // 固定大小策略
+        playerLayout->addWidget(avatarButton, 0, Qt::AlignCenter);  // 居中添加头像按钮
+
+        // 输入框
+        QLineEdit* nameInput = new QLineEdit(this);
+        nameInput->setPlaceholderText(QString("输入玩家%1的名字").arg(i + 1));
+        playerLayout->addWidget(nameInput, 0, Qt::AlignCenter);  // 居中添加输入框
+
+        // 将每个玩家的布局添加到横向布局
+        avatarLayout->addLayout(playerLayout);
+
+        // 连接头像按钮点击事件，后续可实现头像选择逻辑
+        connect(avatarButton, &QPushButton::clicked, this, [this, i]() {
+            // 处理头像选择逻辑
+            // 弹出选择头像的对话框等逻辑
+            playerAvatarSelectionDialog->show();
+        });
+
+
     }
 
+    // 添加头像布局到主布局
+    mainLayout->addLayout(avatarLayout);
+
+    // 开始游戏按钮
     QPushButton* startButton = new QPushButton("开始游戏", this);
-    QPushButton* backButton = new QPushButton("返回菜单", this);
-    // 设置按钮的大小策略
     startButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+
+    // 返回菜单按钮
+    QPushButton* backButton = new QPushButton("返回菜单", this);
     backButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
 
-    layout->setAlignment(Qt::AlignCenter);
-    layout->addLayout(gridLayout);
-    layout->addWidget(startButton);
-    layout->addWidget(backButton);
-    setLayout(layout);
+    // 添加按钮到主布局
+    mainLayout->addWidget(startButton, 0, Qt::AlignCenter);  // 居中添加开始按钮
+    mainLayout->addWidget(backButton, 0, Qt::AlignCenter);   // 居中添加返回按钮
+
+    setLayout(mainLayout);
 
     // 连接信号
     connect(startButton, &QPushButton::clicked, this, &CharacterSelectionWidget::startGame);

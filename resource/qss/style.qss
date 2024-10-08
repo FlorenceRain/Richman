@@ -1,9 +1,5 @@
 QPushButton {
-    font-size: 18px;
-    min-height: 30px;
-    max-height: 70px;
-
-    max-width: 500px;
+    font-size: 20px;
 
     color: white;
     background-color: #3498db; /* 按钮背景色 */

@@ -2,6 +2,7 @@
 #include "ui_startmenuwidget.h"
 #include <QGraphicsRectItem>
 #include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QPushButton>
 #include <QLabel>
 StartMenuWidget::StartMenuWidget(QWidget *parent)
@@ -14,11 +15,12 @@ StartMenuWidget::StartMenuWidget(QWidget *parent)
     ui->setupUi(this);
 
     QVBoxLayout* layout = new QVBoxLayout(this);
+    QHBoxLayout* mainLayout = new QHBoxLayout(this);
 
     // 设置按钮的大小策略
-    startButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-    loadButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-    multiplayerButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+    startButton->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+    loadButton->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+    multiplayerButton->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
 
 
     // 添加按钮并调整布局
@@ -30,7 +32,11 @@ StartMenuWidget::StartMenuWidget(QWidget *parent)
     // 添加一个伸缩项，将按钮组置于布局的中间
     layout->addStretch();
 
-    setLayout(layout);
+    mainLayout->addStretch();
+    mainLayout->addLayout(layout);
+    mainLayout->addStretch();
+
+    setLayout(mainLayout);
 
     // 连接信号
     connect(startButton, &QPushButton::clicked, this, &StartMenuWidget::startGame);

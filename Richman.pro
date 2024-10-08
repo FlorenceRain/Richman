@@ -25,6 +25,7 @@ SOURCES += \
     mainwindow.cpp \
     map.cpp \
     player.cpp \
+    playeravatarselectiondialog.cpp \
     startmenuwidget.cpp \
     starttile.cpp \
     tile.cpp \
@@ -46,6 +47,7 @@ HEADERS += \
     mainwindow.h \
     map.h \
     player.h \
+    playeravatarselectiondialog.h \
     startmenuwidget.h \
     starttile.h \
     tile.h \
@@ -55,6 +57,7 @@ FORMS += \
     characterselectionwidget.ui \
     gameboardwidget.ui \
     mainwindow.ui \
+    playeravatarselectiondialog.ui \
     startmenuwidget.ui
 
 # Default rules for deployment.
