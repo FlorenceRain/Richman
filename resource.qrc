@@ -2,5 +2,10 @@
     <qresource prefix="/qss">
         <file>resource/qss/style.qss</file>
     </qresource>
-    <qresource prefix="/"/>
+    <qresource prefix="/img">
+        <file>resource/img/player_icon0.png</file>
+        <file>resource/img/player_icon1.png</file>
+        <file>resource/img/player_icon2.png</file>
+        <file>resource/img/player_icon3.png</file>
+    </qresource>
 </RCC>

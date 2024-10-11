@@ -2,7 +2,9 @@
 #define CHARACTERSELECTIONWIDGET_H
 
 #include <QWidget>
+#include <QVector>
 #include "playeravatarselectiondialog.h"
+#include "playerview.h"
 
 namespace Ui {
 class CharacterSelectionWidget;
@@ -23,6 +25,7 @@ signals:
 private:
     Ui::CharacterSelectionWidget *ui;
     PlayerAvatarSelectionDialog* playerAvatarSelectionDialog;
+    QVector<PlayerView*> playerView;
 };
 
 #endif // CHARACTERSELECTIONWIDGET_H

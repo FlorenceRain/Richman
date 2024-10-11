@@ -26,26 +26,25 @@ CharacterSelectionWidget::CharacterSelectionWidget(QWidget *parent)
 
         // 头像按钮
         QPushButton* avatarButton = new QPushButton("?", this);
-        avatarButton->setFixedSize(200, 200);  // 固定头像大小为400x400
+        avatarButton->setFixedSize(200, 200);  // 固定头像大小为200x200
         avatarButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);  // 固定大小策略
         playerLayout->addWidget(avatarButton, 0, Qt::AlignCenter);  // 居中添加头像按钮
 
         // 输入框
         QLineEdit* nameInput = new QLineEdit(this);
         nameInput->setPlaceholderText(QString("输入玩家%1的名字").arg(i + 1));
+        nameInput->setText(QString("玩家%1").arg(i + 1));
         playerLayout->addWidget(nameInput, 0, Qt::AlignCenter);  // 居中添加输入框
 
         // 将每个玩家的布局添加到横向布局
         avatarLayout->addLayout(playerLayout);
 
         // 连接头像按钮点击事件，后续可实现头像选择逻辑
-        connect(avatarButton, &QPushButton::clicked, this, [this, i]() {
+        connect(avatarButton, &QPushButton::clicked, this, [this]() {
             // 处理头像选择逻辑
             // 弹出选择头像的对话框等逻辑
             playerAvatarSelectionDialog->show();
         });
-
-
     }
 
     // 添加头像布局到主布局
@@ -68,6 +67,9 @@ CharacterSelectionWidget::CharacterSelectionWidget(QWidget *parent)
     // 连接信号
     connect(startButton, &QPushButton::clicked, this, &CharacterSelectionWidget::startGame);
     connect(backButton, &QPushButton::clicked, this, &CharacterSelectionWidget::backup);
+    connect(backButton, &QPushButton::clicked, this, [this]() {
+        playerAvatarSelectionDialog->hide();
+    });
 }
 
 CharacterSelectionWidget::~CharacterSelectionWidget()

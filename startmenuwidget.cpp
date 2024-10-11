@@ -14,7 +14,7 @@ StartMenuWidget::StartMenuWidget(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QVBoxLayout* layout = new QVBoxLayout(this);
+    QVBoxLayout* layout = new QVBoxLayout();
     QHBoxLayout* mainLayout = new QHBoxLayout(this);
 
     // 设置按钮的大小策略

@@ -2,6 +2,10 @@
 #define PLAYERAVATARSELECTIONDIALOG_H
 
 #include <QDialog>
+#include <QVector>
+#include <QPushButton>
+
+#include "playericonbutton.h"
 
 namespace Ui {
 class PlayerAvatarSelectionDialog;
@@ -15,8 +19,12 @@ public:
     explicit PlayerAvatarSelectionDialog(QWidget *parent = nullptr);
     ~PlayerAvatarSelectionDialog();
 
+signals:
+
+
 private:
     Ui::PlayerAvatarSelectionDialog *ui;
+    QVector<PlayerIconButton*> iconButtons;
 };
 
 #endif // PLAYERAVATARSELECTIONDIALOG_H

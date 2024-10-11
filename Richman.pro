@@ -24,8 +24,11 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     map.cpp \
+    mypushbutton.cpp \
     player.cpp \
     playeravatarselectiondialog.cpp \
+    playericonbutton.cpp \
+    playerview.cpp \
     startmenuwidget.cpp \
     starttile.cpp \
     tile.cpp \
@@ -46,8 +49,11 @@ HEADERS += \
     jailtile.h \
     mainwindow.h \
     map.h \
+    mypushbutton.h \
     player.h \
     playeravatarselectiondialog.h \
+    playericonbutton.h \
+    playerview.h \
     startmenuwidget.h \
     starttile.h \
     tile.h \
