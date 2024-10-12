@@ -18,9 +18,11 @@ public:
 signals:
     void signSendPix(QPixmap pix);
     void signSelectChanged(bool isSelect);
+    void signSelected();
 
 public slots:
     void slotSelectChanged(bool isSelect);
+    void slotDeseclect();
 
 private:
     bool isSelect;

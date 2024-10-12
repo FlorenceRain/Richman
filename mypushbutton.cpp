@@ -7,7 +7,6 @@ MyPushButton::MyPushButton(QWidget *parent, QString picturePath, double ratio)
 {
     pix=pix.scaled(pix.width()*ratio,pix.height()*ratio);
     this->setFixedSize(pix.width(),pix.height());
-    this->setStyleSheet("QPushButton{border:0px;}");
     this->setIcon(pix);
     this->setIconSize(QSize(pix.width(),pix.height()));
  }

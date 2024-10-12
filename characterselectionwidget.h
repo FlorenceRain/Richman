@@ -22,6 +22,9 @@ signals:
     void startGame();
     void backup();
 
+public slots:
+        void slotReceivePix(QPixmap pix, QObject* openFrom = nullptr);
+
 private:
     Ui::CharacterSelectionWidget *ui;
     PlayerAvatarSelectionDialog* playerAvatarSelectionDialog;

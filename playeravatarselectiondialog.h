@@ -18,13 +18,23 @@ class PlayerAvatarSelectionDialog : public QDialog
 public:
     explicit PlayerAvatarSelectionDialog(QWidget *parent = nullptr);
     ~PlayerAvatarSelectionDialog();
+    void showFrom(QObject* openFrom = nullptr);
+
+    void setPix(const QPixmap& pix);
+    QPixmap getPix();
+
 
 signals:
+    void signSendPix(QPixmap pix, QObject* openFrom = nullptr);
 
+public slots:
+    void soltSetPix(QPixmap pix);
 
 private:
     Ui::PlayerAvatarSelectionDialog *ui;
     QVector<PlayerIconButton*> iconButtons;
+    QObject* openFrom;
+    QPixmap pix;
 };
 
 #endif // PLAYERAVATARSELECTIONDIALOG_H
