@@ -59,7 +59,7 @@ PlayerAvatarSelectionDialog::~PlayerAvatarSelectionDialog()
     delete ui;
 }
 
-void PlayerAvatarSelectionDialog::showFrom(QObject *openFrom)
+void PlayerAvatarSelectionDialog::slotOpenFrom(QObject *openFrom)
 {
     this->openFrom = openFrom;
     this->show();

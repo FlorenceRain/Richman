@@ -3,6 +3,10 @@
 
 #include <QObject>
 #include <QVector>
+#include <QPixmap>
+
+
+#include "playercreatinfo.h"
 
 class Tile;
 
@@ -10,7 +14,7 @@ class Player : public QObject
 {
     Q_OBJECT
 public:
-    explicit Player(QObject *parent = nullptr, QString name = "Player",quint32 cash = 0, Tile* currentTile = nullptr);
+    explicit Player(PlayerCreatInfo playerCreatInfo, QObject *parent = nullptr);
 
     enum State {
         Normal,   // 正常状态
@@ -53,6 +57,7 @@ signals:
 
 private:
     QString name;           // 玩家名字
+    QPixmap avatarPix;      // 头像
     quint32 cash;           // 现金
     Tile* currentTile;      // 玩家当前所在格
     quint32 turnCount;      // 当前回合数

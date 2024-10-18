@@ -1,6 +1,5 @@
 #include "characterselectionwidget.h"
 #include "ui_characterselectionwidget.h"
-#include "mypushbutton.h"
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QPushButton>
@@ -10,7 +9,8 @@
 CharacterSelectionWidget::CharacterSelectionWidget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::CharacterSelectionWidget)
-    ,playerAvatarSelectionDialog(new PlayerAvatarSelectionDialog(this))
+    , playerAvatarSelectionDialog(new PlayerAvatarSelectionDialog(this))
+    , characterSelectionGroupBoxs{}
 {
     ui->setupUi(this);
 
@@ -22,34 +22,18 @@ CharacterSelectionWidget::CharacterSelectionWidget(QWidget *parent)
     avatarLayout->setAlignment(Qt::AlignCenter);
 
     // 头像选择和输入框
-    for (int i = 0; i < 4; ++i) {
-        QVBoxLayout* playerLayout = new QVBoxLayout();  // 每个玩家的布局
+    characterSelectionGroupBoxs.append(new CharacterSelectionGroupBox(this,":/img/resource/img/player_icon0", 1 , "玩家1"));
+    characterSelectionGroupBoxs.append(new CharacterSelectionGroupBox(this,":/img/resource/img/player_icon0", 1 , "玩家2"));
+    characterSelectionGroupBoxs.append(new CharacterSelectionGroupBox(this,":/img/resource/img/player_icon0", 1 , "玩家3"));
+    characterSelectionGroupBoxs.append(new CharacterSelectionGroupBox(this,":/img/resource/img/player_icon0", 1 , "玩家4"));
 
-        // 头像按钮
-        QPushButton* avatarButton = new MyPushButton(this,":/img/resource/img/player_icon0", 1);
-        avatarButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);  // 固定大小策略
 
-        // 输入框
-        QLineEdit* nameInput = new QLineEdit(this);
-        nameInput->setPlaceholderText(QString("输入玩家%1的名字").arg(i + 1));
-        nameInput->setText(QString("玩家%1").arg(i + 1));
-
-        //是否是AI玩家
-        QCheckBox* aiCheckBox = new QCheckBox("是否是AI玩家",this);
-
-        playerLayout->addWidget(avatarButton, 0, Qt::AlignCenter);  // 居中添加头像按钮
-        playerLayout->addWidget(nameInput, 0, Qt::AlignCenter);  // 居中添加输入框
-        playerLayout->addWidget(aiCheckBox, 0, Qt::AlignCenter);  // 居中添加输入框
-
-        // 将每个玩家的布局添加到横向布局
-        avatarLayout->addLayout(playerLayout);
-
-        // 连接头像按钮点击事件，后续可实现头像选择逻辑
-        connect(avatarButton, &QPushButton::clicked, this, [this,avatarButton]() {
-            // 弹出选择头像的对话框等逻辑
-            playerAvatarSelectionDialog->showFrom(qobject_cast<QObject*>(avatarButton));
-        });
+    for(CharacterSelectionGroupBox* characterSelectionGroupBox : characterSelectionGroupBoxs)
+    {
+        avatarLayout->addWidget(characterSelectionGroupBox);
+        connect(characterSelectionGroupBox, &CharacterSelectionGroupBox::signOpenDialog, playerAvatarSelectionDialog, &PlayerAvatarSelectionDialog::slotOpenFrom);
     }
+
 
     // 添加头像布局到主布局
     mainLayout->addLayout(avatarLayout);
@@ -86,13 +70,12 @@ CharacterSelectionWidget::~CharacterSelectionWidget()
 void CharacterSelectionWidget::slotReceivePix(QPixmap pix, QObject *openFrom)
 {
     // 检查 openFrom 是否是 QPushButton 类型
-    QPushButton* button = qobject_cast<QPushButton*>(openFrom);
+    CharacterSelectionGroupBox* groupBox = qobject_cast<CharacterSelectionGroupBox*>(openFrom);
 
     // 如果是 QPushButton
-    if (button) {
+    if (groupBox) {
         // 设置按钮的图像
-        button->setIcon(pix);
-        button->setIconSize(pix.size());  // 可根据需要调整图像大小
+        groupBox->setIcon(pix);
     } else {
         qWarning() << "Received object is not a QPushButton!";
     }

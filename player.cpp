@@ -1,23 +1,25 @@
 #include "player.h"
 #include "tile.h"
 
-Player::Player(QObject *parent, QString name, quint32 cash, Tile *currentTile)
+Player::Player(PlayerCreatInfo playerCreatInfo, QObject *parent)
     : QObject{parent}
-    , name(name)
-    , cash(cash)
-    , currentTile(currentTile)
+    , name(playerCreatInfo.getName())
+    , cash(0)
+    , currentTile(nullptr)
     , turnCount(0)
     , status(Normal)
     , statusDuration(0)
     , assets{}
-
 {
 
 }
 
 void Player::setCash(quint32 cash)
 {
-
+    if(cash != this->cash)
+    {
+        this->cash = cash;
+    }
 }
 
 void Player::addCash(quint32 cash)
@@ -32,7 +34,7 @@ void Player::reduceCash(quint32 cash)
 
 quint32 Player::getCash() const
 {
-
+    return this->cash;
 }
 
 void Player::moveTo(Tile *newTile)

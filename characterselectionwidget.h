@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QVector>
 #include "playeravatarselectiondialog.h"
-#include "playerview.h"
+#include "characterselectiongroupbox.h"
 
 namespace Ui {
 class CharacterSelectionWidget;
@@ -28,7 +28,7 @@ public slots:
 private:
     Ui::CharacterSelectionWidget *ui;
     PlayerAvatarSelectionDialog* playerAvatarSelectionDialog;
-    QVector<PlayerView*> playerView;
+    QVector<CharacterSelectionGroupBox*> characterSelectionGroupBoxs;
 };
 
 #endif // CHARACTERSELECTIONWIDGET_H

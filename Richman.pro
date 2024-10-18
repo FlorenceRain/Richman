@@ -12,6 +12,7 @@ SOURCES += \
     bank.cpp \
     card.cpp \
     chancetile.cpp \
+    characterselectiongroupbox.cpp \
     characterselectionwidget.cpp \
     communitychesttile.cpp \
     companytile.cpp \
@@ -27,8 +28,8 @@ SOURCES += \
     mypushbutton.cpp \
     player.cpp \
     playeravatarselectiondialog.cpp \
+    playercreatinfo.cpp \
     playericonbutton.cpp \
-    playerview.cpp \
     startmenuwidget.cpp \
     starttile.cpp \
     tile.cpp \
@@ -38,6 +39,7 @@ HEADERS += \
     bank.h \
     card.h \
     chancetile.h \
+    characterselectiongroupbox.h \
     characterselectionwidget.h \
     communitychesttile.h \
     companytile.h \
@@ -52,8 +54,8 @@ HEADERS += \
     mypushbutton.h \
     player.h \
     playeravatarselectiondialog.h \
+    playercreatinfo.h \
     playericonbutton.h \
-    playerview.h \
     startmenuwidget.h \
     starttile.h \
     tile.h \
